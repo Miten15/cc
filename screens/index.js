@@ -6,6 +6,7 @@ import Profile from "./profile/Profile"
 import Search from "./search/Search"
 import StateDetails from "./details/StateDetails"
 import Recommended from "./details/Recommended"
+import PlaceDetails from "./details/PlaceDetails"
 
 export {
     Onboarding,
@@ -15,5 +16,6 @@ export {
     Profile,
     Search,
     StateDetails,
-    Recommended
+    Recommended,
+    PlaceDetails
 }
