@@ -7,7 +7,8 @@ import Search from "./search/Search"
 import StateDetails from "./details/StateDetails"
 import Recommended from "./details/Recommended"
 import PlaceDetails from "./details/PlaceDetails"
-
+import PackageDetails from "./details/PackageDetails"
+import PackageList from "./details/PackageList"
 export {
     Onboarding,
     Home,
@@ -17,5 +18,7 @@ export {
     Search,
     StateDetails,
     Recommended,
-    PlaceDetails
+    PlaceDetails,
+    PackageDetails,
+    PackageList
 }

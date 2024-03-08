@@ -7,7 +7,8 @@ import reusable from '../Reusable/reusbale.style'
 import { Feather } from "@expo/vector-icons";
 import ReusableText from '../Reusable/ReusableText'
 import { TEXT, COLORS, SIZES } from '../../constants/theme'
-import ReusableTile from '../Reusable/ReusableTile'
+import ReusableTile from "../Reusable/ReusableTile"
+
 const Recommendation = () => {
     const navigation = useNavigation()
 
@@ -77,7 +78,10 @@ const Recommendation = () => {
         contentContainerStyle={{columnGap: SIZES.medium}}
         showsHorizontalScrollIndicator={false}
         renderItem={({item}) => (
-            <ReusableTile item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
+          <ReusableTile 
+          item={item} 
+          onPress={() => navigateToPlaceDetails(item)}
+      />
         )}
         />
         </View>

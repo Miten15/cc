@@ -5,6 +5,7 @@ import ReusableText from '../Reusable/ReusableText'
 import { Feather } from "@expo/vector-icons";
 import { TEXT, COLORS, SIZES } from '../../constants/theme'
 import { useNavigation } from '@react-navigation/native'
+import PackageCard from '../Tiles/Package/PackageCard';
 
 
 const BestPackages = () => {
@@ -12,45 +13,45 @@ const BestPackages = () => {
 
     const packages = [
       {
-        "_id": "64c674d23cfa5e847bcd5430",
+        "_id": "1",
         "state_id": "64c62bfc65af9f8c969a8d04", // Rajasthan
         "title": "Khajuraho Temples Pilgrimage",
         "imageUrl": "https://thefloatingpebbles.com/wp-content/uploads/2023/03/22-10-03-MP22-88-1024x731.jpg",
         "rating": 4.9,
         "review": "1204 Reviews",
         "location": "Khajuraho, Rajasthan",
-        "price": 15999
+        "price": '₹1599 per person'
       },
       {
-        "_id": "64d0b5a4d3cb4985a76ac1aa",
+        "_id": "2",
         "state_id": "64cf2c935d14628d0ac0a2b9", // Uttar Pradesh
         "title": "Varanasi Ganga Aarti Experience",
         "imageUrl": "https://www.raffaeleferrari.com/wp-content/uploads/2020/04/ganga-arti.jpeg",
         "rating": 4.7,
         "review": "1204 Reviews",
         "location": "Varanasi, Uttar Pradesh",
-        "price": 11999
+        "price": '₹1599 per person'
       },
       {
-        "_id": "64c675be3cfa5e847bcd5439",
+        "_id": "3",
         "state_id": "64cf2d095d14628d0ac0a2bd", // Uttarakhand
         "title": "Char Dham Yatra",
         "imageUrl": "https://static.toiimg.com/photo/98085810.cms",
         "rating": 4.6,
         "review": "12854 Reviews",
         "location": "Uttarakhand",
-        "price": 39999
+        "price": '₹1599 per person'
       },
       {
-        "_id": "64c67442776ed29f19727fd7",
+        "_id": "4",
         "state_id": "64cf2d4d5d14628d0ac0a2bf", // Tamil Nadu
         "title": "Meenakshi Temple Heritage Tour",
         "imageUrl": "https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/21/a87540ce5aa169669e49bad274149709_1000x1000.jpg",
         "rating": 4.7,
         "review": "1204 Reviews",
         "location": "Madurai, Tamil Nadu",
-        "price": 18499
-      }
+        "price":'₹1599 per person'
+      }
     ];
 
   return (
@@ -66,7 +67,7 @@ const BestPackages = () => {
               color={COLORS.black}
             />
     
-            <TouchableOpacity onPress={() => navigation.navigate("")}>
+            <TouchableOpacity onPress={() => navigation.navigate("PackageList")}>
               <Feather name="list" size={20} />
             </TouchableOpacity>
           </View>
@@ -76,7 +77,10 @@ const BestPackages = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle= {{ columnGap: SIZES.medium}}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item._id}
+          renderItem={({item}) => (
+            <PackageCard item={item} margin={10} onPress={()=> navigation.navigate('PackageDetails')}/>
+          )}
           />
     
     </View>
