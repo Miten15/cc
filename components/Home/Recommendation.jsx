@@ -4,8 +4,10 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import reusable from '../Reusable/reusbale.style'
+import { Feather } from "@expo/vector-icons";
 import ReusableText from '../Reusable/ReusableText'
 import { TEXT, COLORS, SIZES } from '../../constants/theme'
+import ReusableTile from '../Reusable/ReusableTile'
 const Recommendation = () => {
     const navigation = useNavigation()
 
@@ -51,46 +53,41 @@ const Recommendation = () => {
           "review": "12345 Reviews"
         }
       ];
-  return (
-    <View style={styles.container}>
-        <View style={[reusable.rowWithSpace('space-between'), {paddingBottom: 20}]}>
-        <ReusableText
-           text={"Top Trending"}
-           family={"medium"}
-           size={TEXT.large}
-           color={COLORS.black}
-         />
-
-         <TouchableOpacity  onPress={()=> navigation.navigate('Recommended')}>
-            <Text style={styles.text}>View All</Text>
-         </TouchableOpacity>
-        </View>
-
+      return (
+        <View style={styles.container}>
+          <View
+            style={[reusable.rowWithSpace("space-between"), { paddingBottom: 20 }]}
+          >
+            <ReusableText
+              text={"Recommendations"}
+              family={"medium"}
+              size={TEXT.large}
+              color={COLORS.black}
+            />
+    
+            <TouchableOpacity onPress={() => navigation.navigate("Recommended")}>
+              <Feather name="list" size={20} />
+            </TouchableOpacity>
+          </View>
+    
         <FlatList 
         data={topTrending}
         horizontal
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={(item) => item._id}
+        keyExtractor={(item)=> item._id}
         contentContainerStyle={{columnGap: SIZES.medium}}
+        showsHorizontalScrollIndicator={false}
         renderItem={({item}) => (
-           <Text>{item.title}</Text>
-        ) }
+            <ReusableTile item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
+        )}
         />
-        
-    </View>
-  )
-}
-
-export default Recommendation
-
-const styles = StyleSheet.create({
-
-    container: {
-        paddingTop: 30
-    },
-    text: {
-        fontFamily: TEXT.medium,
-        fontSize: TEXT.small,
-        color: 'blue'
-    }
-})
+        </View>
+      );
+    };
+    
+    export default Recommendation;
+    
+    const styles = StyleSheet.create({
+      container: {
+        paddingTop: 30,
+      },
+    });

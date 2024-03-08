@@ -2,7 +2,8 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import reusable from '../../components/Reusable/reusbale.style'
-import { HeightSpacer, ReusableText, Places } from '../../components'
+import { HeightSpacer, Recommendation, ReusableText,  } from '../../components'
+import Places from '../../components/Home/Places'
 import { COLORS, SIZES, TEXT } from '../../constants/theme'
 import {AntDesign} from '@expo/vector-icons'
 import styles from './home.style'
@@ -35,8 +36,9 @@ const Home = ({ navigation }) => {
            color={COLORS.black}
          />
          
-         <Places />
- 
+        <Places />
+        <HeightSpacer height={15} />
+        <Recommendation />
          
        </View>
      </SafeAreaView>

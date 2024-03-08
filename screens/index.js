@@ -6,6 +6,7 @@ import Profile from "./profile/Profile"
 import Search from "./search/Search"
 import StateDetails from "./details/StateDetails"
 import Recommended from "./details/Recommended"
+
 export {
     Onboarding,
     Home,
