@@ -31,7 +31,7 @@ const ReusableTile2 = ({ item, onPress }) => {
             size={SIZES.medium}
             color={COLORS.black}
             align={"left"}
-            paddingLeft={5}
+            paddingLeft={10}
           />
           
           <HeightSpacer height={8} />
@@ -40,9 +40,9 @@ const ReusableTile2 = ({ item, onPress }) => {
             text={item.location}
             family={"medium"}
             size={14}
-            color={COLORS.black}
+            color={COLORS.gray}
             align={"left"}
-            paddingLeft={5}
+            paddingLeft={10}
           />
 
           <HeightSpacer height={8} />

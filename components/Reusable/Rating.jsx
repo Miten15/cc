@@ -9,7 +9,7 @@ import reusable from "./reusbale.style";
 const Rating = ({ rating }) => {
   return (
     <View style={reusable.rowWithSpace("flex-start")}>
-      <MaterialCommunityIcons name="star" size={20} color={"#FD9942"} />
+      <MaterialCommunityIcons name="star" size={20} color={"#FD9942"} paddingLeft={8} />
       <WidthSpacer width={5} />
 
       <ReusableText
@@ -17,6 +17,7 @@ const Rating = ({ rating }) => {
         family={"medium"}
         size={15}
         color={"#FD9942"}
+        
       />
     </View>
   );
