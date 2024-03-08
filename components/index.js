@@ -17,5 +17,6 @@ export {
     NetworkImage,
     Recommendation,
     PackageCard,
-    Rating
+    Rating,
+   
 };
