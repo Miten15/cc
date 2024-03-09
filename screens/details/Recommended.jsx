@@ -76,7 +76,7 @@ const Recommended = ({ navigation }) => {
             <View style={{ marginBottom: 10 }}>
               <ReusableTile2
                 item={item}
-                onPress={() => navigation.navigate("PDetails")} // Pass item details as parameters
+                onPress={() => navigation.navigate("PDetails", item._id)} // Pass item details as parameters
               />
             </View>
           )}
