@@ -76,14 +76,14 @@ const Recommended = ({ navigation }) => {
             <View style={{ marginBottom: 10 }}>
               <ReusableTile2
                 item={item}
-                onPress={() => navigation.navigate('PlaceDetails', item._id)}
+                onPress={() => navigation.navigate("PDetails")} // Pass item details as parameters
               />
             </View>
           )}
         />
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 export default Recommended

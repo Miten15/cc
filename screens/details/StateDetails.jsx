@@ -30,12 +30,12 @@ const StateDetails = ({navigation}) => {
       },
       {
         _id: "64d062a3de20d7c932f1f70a",
-        title: "Statue of Liberty",
+        title: "Khajuraho Temples Pilgrimage",
         imageUrl:
-          "https://d326fntlu7tb1e.cloudfront.net/uploads/c3a8b882-b176-47f0-aec5-a0a49bf42fcd-statue-of-liberty-1.webp",
-        rating: 4.8,
-        review: "1452 Reviews",
-        location: "Liberty Island, New York Harbor",
+          "https://thefloatingpebbles.com/wp-content/uploads/2023/03/22-10-03-MP22-88-1024x731.jpg",
+        rating: 4.7,
+        review: "1204 Reviews",
+        location: "Khajuraho, Rajasthan",
         price: '₹1599 per person'
       },
     ],
@@ -56,9 +56,8 @@ const StateDetails = ({navigation}) => {
           left={20}
           right={20}
           title={state.state}
-          color={COLORS.white}
           icon={"search1"}
-          color1={COLORS.white}
+          
           onPress={() => navigation.goBack()}
           onPress1={() => {}}
         />

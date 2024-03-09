@@ -80,7 +80,8 @@ const Recommendation = () => {
         renderItem={({item}) => (
           <ReusableTile 
           item={item} 
-          onPress={() => navigateToPlaceDetails(item)}
+          onPress={() => navigation.navigate('PlaceDetails', item._id)}
+           
       />
         )}
         />

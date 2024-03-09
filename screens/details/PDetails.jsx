@@ -18,9 +18,10 @@ import {
 import { COLORS, TEXT, SIZES } from "../../constants/theme";
 import reusable from "../../components/Reusable/reusbale.style";
 import { Feather } from "@expo/vector-icons";
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
-const PlaceDetails = () => {
+const PDetails = () => {
+    const navigation = useNavigation(); // Add this line to get navigation object
     const route = useRoute();
     const id = route.params
 
@@ -73,7 +74,7 @@ const PlaceDetails = () => {
         color={COLORS.white}
         icon={"search1"}
         color1={COLORS.white}
-        onPress={() => navigation.goBack()}
+        onPress={() => navigation.goBack()} // Now you can use navigation object
         onPress1={() => {}}
       />
     </View>
@@ -110,7 +111,7 @@ const PlaceDetails = () => {
         <PopularList data={place.popular} />
 
         <ReusableBtn
-          onPress={() => navigation.navigate("PackageSearch")}
+          onPress={() => navigation.navigate("HotelSearch")}
           btnText={"Find Best Hotels"}
           width={SIZES.width - 40}
           backgroundColor={COLORS.green}
@@ -125,7 +126,7 @@ const PlaceDetails = () => {
   )
 }
 
-export default PlaceDetails
+export default PDetails
 
 const styles = StyleSheet.create({
   description: {

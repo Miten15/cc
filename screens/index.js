@@ -7,6 +7,7 @@ import Search from "./search/Search"
 import StateDetails from "./details/StateDetails"
 import Recommended from "./details/Recommended"
 import PlaceDetails from "./details/PlaceDetails"
+import PDetails from "./details/PDetails"
 import PackageDetails from "./details/PackageDetails"
 import PackageList from "./details/PackageList"
 import PackageSearch from "./search/PackageSearch"
@@ -22,5 +23,6 @@ export {
     PlaceDetails,
     PackageDetails,
     PackageList,
-    PackageSearch
+    PackageSearch,
+    PDetails
 }

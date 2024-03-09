@@ -8,7 +8,7 @@ const PopularList = ({data}) => {
 
 const renderItem=({item}) => (
     <View  style={{marginBottom: 10}}>
-        <ReusableTile2 item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
+        <ReusableTile2 item={item} onPress={()=> navigation.navigate('PlaceDetails')}/>
     </View>
 )
 
