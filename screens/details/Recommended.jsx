@@ -4,10 +4,7 @@ import AppBar from '../../components/Reusable/AppBar'
 import { COLORS, SIZES } from '../../constants/theme'
 import ReusableTile2 from '../../components/Reusable/ReusableTile2'
 
-
-
-
-const Recommended = (navigation) => {
+const Recommended = ({ navigation }) => {
   const topTrending = [
     {
       "_id": "64c631650298a05640539adc",
@@ -57,25 +54,34 @@ const Recommended = (navigation) => {
   
   ];
   return (
-    <SafeAreaView style={{marginHorizontal: 20}}>
-      <View style={{height: 50}}>
-        <AppBar title={'Top Trending'} icon={'search1'}  top={60} left={0} right={0} />
+    <SafeAreaView style={{ marginHorizontal: 20 }}>
+      <View style={{ height: 50 }}>
+        <AppBar
+          title={'Top Trending'}
+          icon={'search1'}
+          top={60}
+          left={0}
+          right={0}
+          onPress={() => navigation.goBack()}
+          onPress1={() => navigation.navigate('Search')}
+        />
       </View>
 
-      <View style={{paddingTop: 60}}>
-        <FlatList 
-         data={topTrending}
-         keyExtractor={(item) => item._id}
-         contentContainerStyle={{columnGap: SIZES.medium}}
-         renderItem={({item}) => (
-         <View style={{marginBottom: 10}}> 
-          <ReusableTile2 item={item} onPress={() => navigation.navigate('PlaceDetails')}/> 
-          </View>
-         )}
+      <View style={{ paddingTop: 60 }}>
+        <FlatList
+          data={topTrending}
+          keyExtractor={(item) => item._id}
+          contentContainerStyle={{ columnGap: SIZES.medium }}
+          renderItem={({ item }) => (
+            <View style={{ marginBottom: 10 }}>
+              <ReusableTile2
+                item={item}
+                onPress={() => navigation.navigate('PlaceDetails', item._id)}
+              />
+            </View>
+          )}
         />
-
-      </View >
-      
+      </View>
     </SafeAreaView>
   )
 }

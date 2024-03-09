@@ -9,6 +9,7 @@ import Recommended from "./details/Recommended"
 import PlaceDetails from "./details/PlaceDetails"
 import PackageDetails from "./details/PackageDetails"
 import PackageList from "./details/PackageList"
+import PackageSearch from "./search/PackageSearch"
 export {
     Onboarding,
     Home,
@@ -20,5 +21,6 @@ export {
     Recommended,
     PlaceDetails,
     PackageDetails,
-    PackageList
+    PackageList,
+    PackageSearch
 }
