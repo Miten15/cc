@@ -7,7 +7,8 @@ import NetworkImage from "./Reusable/NetworkImage";
 import Recommendation from "./Home/Recommendation";
 import Rating from "./Reusable/Rating";
 import PackageCard from "./Tiles/Package/PackageCard";
-
+import DescriptionText from "./Reusable/DescriptionText";
+import PopularList from "./States/PopularList";
 export {
     ReusableText,
     ReuseableBtn,
@@ -18,5 +19,7 @@ export {
     Recommendation,
     PackageCard,
     Rating,
+    DescriptionText,
+    PopularList
    
 };
